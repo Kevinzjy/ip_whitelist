@@ -41,6 +41,12 @@ curl -X POST --anyauth -u user:password \
      -d '{"user-name":"user", "password": "password"}' http://host_ip:8080/login\?ip\=your_ip
 ```
 
+手动获取当前 ip
+
+```bash
+ssh -tt user@host "who am i --ips | awk '{print \$6}'"
+```
+
 #### 停止网页
 
 使用 pgrep 命令查找后台进程的 pid
