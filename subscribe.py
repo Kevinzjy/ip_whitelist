@@ -64,7 +64,7 @@ class Subscribe(object):
     @cherrypy.expose
     def login(self, **kwargs):
         try:
-            tmp_ip = kwargs['ip'] if ('ip' in kwargs and kwargs['ip']) else cherrypy.request.headers['Remote-Addr']:
+            tmp_ip = kwargs['ip'] if ('ip' in kwargs and kwargs['ip']) else cherrypy.request.headers['Remote-Addr']
             if tmp_ip.startswith('::ffff:'):
                 tmp_ip = tmp_ip[7:]
             ip = ipaddress.ip_address(tmp_ip)
