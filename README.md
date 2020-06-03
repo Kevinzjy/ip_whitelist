@@ -8,7 +8,7 @@ iptables-restore < ./ruleset
 netfilter-persistent save
 ```
 
-修改 `subscribe.py` 中用户名和密码配置，将 {'USER': 'PASSWORD'} 替换为自定义的用户名和密码
+修改 `subscribe.py` 中用户名和密码配置，将 {'USER': 'PASSWORD'} 替换为自定义的用户名和密码，并更改 `tools.auth_digest.key`
 
 ```bash
 virtualenv venv
