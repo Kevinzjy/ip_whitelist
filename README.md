@@ -25,6 +25,7 @@ openssl rand -hex 12
 ```bash
 virtualenv venv
 source ./venv/bin/activate
+pip install cherrypy
 chmod +x update_ip.sh
 python subscribe.py
 ```
